@@ -1,0 +1,14 @@
+/* fonts */
+@font-face {
+  font-family: 'archivo_narrowbold';
+  font-style: normal;
+  font-weight: 400;
+  $fn: 'archivonarrow-bold-webfont';
+  src: url("#{$fonts_path}#{$fn}.eot");
+  src: local('Archivo Narrow Bold'),
+    local('ArchivoNarrow-Bold'),
+    url("#{$fonts_path}#{$fn}.woff2") format("woff2"),
+    url("#{$fonts_path}#{$fn}.woff") format("woff"),
+    url("#{$fonts_path}#{$fn}.svg#archivo_narrowbold") format("svg"),
+    url("#{$fonts_path}#{$fn}.eot#iefix") format("embedded-opentype");
+}

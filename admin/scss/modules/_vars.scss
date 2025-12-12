@@ -1,0 +1,36 @@
+$pt_px_scale: 1.7;
+//fonts
+$fonts_path: "../fonts/";
+$fontsize: 16; //base font size, used by default on em calculations
+$fontweight: 400;
+$line_height: 1;
+$fontf1: 'archivo_narrowbold', sans-serif;
+
+//images
+$images_path: "../images/";
+
+//backgrounds
+$bg_body: #ECEEEF;
+$bg_base: #fff;
+$bg_box_disabled: #9A9A9A;
+$bg_box_colors: (
+  alert: (top: #D0202B, bottom: #E71C2A),
+  hazard: (top: #F4492C, bottom: #F6662F),
+  warning: (top: #E0BD41, bottom: #F1D03F),
+  goal: (top: #90BE4F, bottom: #93CB51),
+  above_beyond: (top: #11477B, bottom: #0F4D95)
+);
+
+//colors
+$c_base: #191247;
+$c_title1: #706f6e;
+$c_title2: #676767;
+$c_box: #fff;
+
+//borders
+$b_title: #929496;
+$b_sep: #858585;
+$b_box: $c_box;
+
+//shadow
+$shadow1: 0 em(ptpx(1)) em(ptpx(1.5)) 0 rgba(0, 0, 0, 0.6);

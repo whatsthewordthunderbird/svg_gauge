@@ -1,0 +1,33 @@
+@mixin clearfix () {
+  &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
+}
+
+@mixin bg_gradient_v ($col1, $col2) {
+  background: $col1;
+  background: linear-gradient(to bottom,  $col1 0%,$col2 100%);
+  $col1: opacify($col1, 1);
+  $col2: opacify($col2, 1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$col1}', endColorstr='#{$col2}',GradientType=0 )";
+}
+@mixin bg_gradient_h ($col1, $col2) {
+  background: $col1;
+  background: linear-gradient(to right,  $col1 0%,$col2 100%);
+  $col1: opacify($col1, 1);
+  $col2: opacify($col2, 1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$col1}', endColorstr='#{$col2}',GradientType=1 )";
+}
+@mixin bg_gradient_a ($angle, $col1, $col2) {
+  background: $col1;
+  background: linear-gradient($angle + deg,  $col1 0%,$col2 100%);
+  $col1: opacify($col1, 1);
+  $col2: opacify($col2, 1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$col1}', endColorstr='#{$col2}',GradientType=1 )";
+}

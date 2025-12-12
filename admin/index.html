@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>-</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link type="text/css" rel="stylesheet" media="all" href="css/admin.css" />
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="js/snap.svg-min.js"></script>
+    <script type="text/javascript" src="js/gauge.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+  </head>
+  <body>
+
+    <div class="contents_wrap">
+
+      <div class="title_cont">
+        <h1>
+          Gauges
+        </h1>
+      </div>
+
+      <div class="clearfix cols_cont">
+
+        <div class="col">
+
+          <div class="titles_cont">
+            <h4>
+              Type 1
+            </h4>
+            <h3>
+              Downward Metric
+            </h3>
+            <h4>
+              Lower Value = Better Result
+            </h4>
+          </div>
+
+          <div class="boxes_cont boxes_cont_d">
+
+            <div class="box required color_alert">
+              <div class="top">
+                Alert Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="59" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="38" class="low sm" />
+              </div>
+            </div>
+
+            <div class="box color_hazard">
+              <div class="top">
+                Hazard Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="37" class="high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="31" class="low" />
+              </div>
+            </div>
+
+            <div class="box color_warning">
+              <div class="top">
+                Warning Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="30" class="high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="17" class="low" />
+              </div>
+            </div>
+
+            <div class="box required color_goal">
+              <div class="top">
+                Goal Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="16" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="6" class="low sm" />
+              </div>
+            </div>
+
+            <div class="box color_above_beyond">
+              <div class="top">
+                Above &amp; Beyond
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="5" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="0" class="low sm" />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="gauge_wrap">
+            <div class="gauge_cont" id="gauge_d"></div>
+          </div>
+
+          <textarea id="gaugeta_d" class="gauge_ta"></textarea>
+
+        </div>
+
+        <div class="col">
+
+          <div class="titles_cont">
+            <h4>
+              Type 2
+            </h4>
+            <h3>
+              Upward Metric
+            </h3>
+            <h4>
+              Higher Value = Better Result
+            </h4>
+          </div>
+
+          <div class="boxes_cont boxes_cont_u">
+
+            <div class="box required color_alert">
+              <div class="top">
+                Alert Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="48" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="0" class="low sm" />
+              </div>
+            </div>
+
+            <div class="box disabled color_hazard">
+              <div class="top">
+                Hazard Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="66" class="high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="49" class="low" />
+              </div>
+            </div>
+
+            <div class="box color_warning">
+              <div class="top">
+                Warning Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="82" class="sm high" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="67" class="sm low" />
+              </div>
+            </div>
+
+            <div class="box required color_goal">
+              <div class="top">
+                Goal Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="100" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="83" class="low sm" />
+              </div>
+            </div>
+
+            <div class="box color_above_beyond">
+              <div class="top">
+                Above &amp; Beyond
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">Starting at</span>
+                <input type="text" value="110" class="high sm" />
+                <span class="text sp">Ending at</span>
+                <input type="text" value="101" class="low sm" />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="gauge_wrap">
+            <div class="gauge_cont" id="gauge_u"></div>
+          </div>
+
+          <textarea id="gaugeta_u" class="gauge_ta"></textarea>
+
+        </div>
+
+        <div class="col">
+
+          <div class="titles_cont">
+            <h4>
+              Type 3
+            </h4>
+            <h3>
+              Sweet Spot Metric
+            </h3>
+            <h4>
+              Inner Range Value = Better Result
+            </h4>
+            <h5>
+              Note: Sweet Spot Metrics are restricted to
+              <br />
+              the 3 color ranges, default to: Red, Yellow, Green
+            </h5>
+          </div>
+
+          <div class="boxes_cont boxes_cont_s">
+
+            <div class="box required color_alert">
+              <div class="top">
+                High Alert Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="216" class="time high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="186" class="time low" />
+              </div>
+            </div>
+
+            <div class="box required color_warning">
+              <div class="top">
+                High Warning Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="185" class="time high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="157" class="time low" />
+              </div>
+            </div>
+
+            <div class="box required color_goal">
+              <div class="top">
+                Goal Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="156" class="time high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="56" class="time low" />
+              </div>
+            </div>
+
+            <div class="box required color_warning">
+              <div class="top">
+                Low Warning Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="55" class="time high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="31" class="time low" />
+              </div>
+            </div>
+
+            <div class="box required color_alert">
+              <div class="top">
+                Low Alert Range
+                <div class="req"><span class="ast"></span>required</div>
+                <div class="on_off"></div>
+              </div>
+              <div class="bottom">
+                <span class="text">High</span>
+                <input type="text" value="30" class="time high" />
+                <span class="text sp">Low</span>
+                <input type="text" value="0" class="time low" />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="gauge_wrap">
+            <div class="gauge_cont" id="gauge_s"></div>
+          </div>
+
+          <textarea id="gaugeta_s" class="gauge_ta"></textarea>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

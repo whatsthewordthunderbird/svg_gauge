@@ -1,0 +1,243 @@
+body {
+  background-color: $bg_body;
+}
+/* contents */
+.contents_wrap {
+  margin: 0 auto;
+  //max-width: em(ptpx(530));
+  max-width: 1804px;
+
+  .title_cont {
+    h1 {
+      $fsize: ptpx(25);
+      color: $c_title1;
+      font-size: em($fsize);
+      padding: em(ptpx(18), $fsize) 0;
+      position: relative;
+      text-align: center;
+      &:after {
+        border-top: 2px solid $b_title;
+        content: ' ';
+        left: 15%;
+        margin: 0 -1px 0 0;
+        position: absolute;
+        top: 100%;
+        width: 70%;
+      }
+    }
+  }
+
+  .cols_cont {
+    padding: em(ptpx(13)) 0;
+    position: relative;
+  }
+  .col {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 em(ptpx(20));
+    width: percentage(1 / 3);
+    .titles_cont {
+      min-height: em(ptpx(79));
+      padding: em(ptpx(17)) 0 em(ptpx(4)) 0;
+      text-align: center;
+      h3 {
+        $fsize: ptpx(16);
+        color: $c_title2;
+        font-size: em($fsize);
+        padding: em(ptpx(5), $fsize) 0 em(ptpx(7), $fsize) 0;
+      }
+      h4 {
+        color: $c_title1;
+        font-size: em(ptpx(10));
+      }
+      h5 {
+        $fsize: ptpx(7);
+        color: $c_title1;
+        font-size: em($fsize);
+        padding: em(ptpx(5), $fsize) 0 0 0;
+      }
+    }
+  }
+
+  //boxes
+  .boxes_cont {
+    margin: 0 auto;
+    max-width: em(ptpx(100));
+    padding: em(ptpx(14)) 0 em(ptpx(24 - 7.5)) 0;
+    position: relative;
+    &:after {
+      border-top: 1px solid $b_title;
+      content: ' ';
+      left: 30%;
+      margin: 0 -1px 0 0;
+      position: absolute;
+      top: 0;
+      width: 40%;
+    }
+    $icon_car_list: (vtargeted: 3, vreached: 1, shoppers: 8, vsold: 1);
+    @each $name, $img in $icon_car_list {
+      &.#{$name} {
+        background-image: url('icon_car#{$img}.png');
+      }
+    }
+    $icon_list: (alert, hazard, warning, goal, above_beyond);
+    @each $icon in $icon_list {
+    }
+    .box {
+      $bradius: 3;
+      color: $c_box;
+      margin: 0 0 em(ptpx(7.5)) 0;
+      .top {
+        $fsize: ptpx(5.8);
+        background: transparent 0 center no-repeat;
+        background-size: em(ptpx(15), $fsize);
+        border-top-left-radius: em(ptpx($bradius), $fsize);
+        border-top-right-radius: em(ptpx($bradius), $fsize);
+        font-size: em($fsize);
+        padding: em(ptpx(4.6), $fsize) em(ptpx(5), $fsize) em(ptpx(4.6), $fsize) em(ptpx(11.5), $fsize);
+        .req {
+          $fsize2: ptpx(3.5);
+          color: $c_box;
+          display: none;
+          float: right;
+          font-size: em($fsize2, $fsize);
+          padding: em(ptpx(2.3), $fsize2) 0 0 em(ptpx(2), $fsize2);
+          position: relative;
+          .ast {
+            $space: 2.3;
+            $size: 2.3;
+            background: transparent url('#{$images_path}icon_asterisk.png') center center no-repeat;
+            background-size: 100% 100%;
+            height: em(ptpx($size), $fsize2);
+            left: 0;
+            position: absolute;
+            top: em(ptpx($space - $size), $fsize2);
+            width: em(ptpx($size), $fsize2);
+          }
+        }
+        .on_off {
+          $fsize2: ptpx(3.8);
+          border: em(ptpx(0.5), $fsize2) solid $c_box;
+          border-radius: em(ptpx(3), $fsize2);
+          box-sizing: border-box;
+          cursor: pointer;
+          float: right;
+          font-size: em($fsize2, $fsize);
+          height: em($fsize, $fsize2);
+          position: relative;
+          width: em(ptpx(16), $fsize2);
+          &:before {
+            content: 'ON';
+            left: em(ptpx(1.5), $fsize2);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:after {
+            $size: 4.2;
+            background-color: $c_box;
+            border-radius: 50%;
+            content: ' ';
+            height: em(ptpx($size), $fsize2);
+            position: absolute;
+            right: em(ptpx(1), $fsize2);
+            top: 50%;
+            transform: translateY(-50%);
+            width: em(ptpx($size), $fsize2);
+          }
+        }
+      }
+      .bottom {
+        $h: 15;
+        $inputh: 7;
+        $fsizen: 4.8;
+        $fsize: ptpx($fsizen);
+        border-bottom-left-radius: em(ptpx($bradius), $fsize);
+        border-bottom-right-radius: em(ptpx($bradius), $fsize);
+        border-top: 1px solid $b_box;
+        font-size: em($fsize);
+        padding: em(ptpx(($h - $inputh) / 2), $fsize) em(ptpx(1), $fsize) em(ptpx(($h - $inputh) / 2), $fsize) em(ptpx(5), $fsize);
+        .text {
+          display: inline-block;
+          padding: em(ptpx(($inputh - $fsizen) / 2), $fsize) em(ptpx(1), $fsize);
+          &.sp {
+            padding-left: em(ptpx(5), $fsize);
+          }
+        }
+        input {
+          border: none;
+          border-radius: em(ptpx(1.5), $fsize);
+          box-shadow: $shadow1;
+          color: $c_base;
+          display: inline-block;
+          font-size: 1em;
+          height: em(ptpx($inputh), $fsize);
+          padding: 0 em(ptpx(1), $fsize);
+          text-align: center;
+          width: em(ptpx(24), $fsize);
+          &.sm {
+            width: em(ptpx(15), $fsize);
+          }
+        }
+      }
+      @each $name, $colors in $bg_box_colors {
+        &.color_#{$name} {
+          .bottom {
+            background-color: map-get($colors, 'bottom');
+          }
+          .top {
+            background-color: map-get($colors, 'top');
+            background-image: url('#{$images_path}box_#{$name}.png');
+          }
+        }
+      }
+      &.required {
+        .top {
+          .req {
+            display: block;
+          }
+          .on_off {
+            display: none;
+          }
+        }
+      }
+      &.disabled {
+        .bottom,
+        .top {
+          background-color: $bg_box_disabled;
+        }
+        .top {
+          .on_off {
+            &:before {
+              content: 'OFF';
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  //gauges
+  .gauge_wrap {
+    margin: 0 auto;
+    max-width: em(ptpx(120));
+  }
+  .gauge_cont {
+    ///---update from gauge.js svg_height and svg_width
+    $h: 274;
+    $w: 372;
+    height: 100%;
+    padding: percentage($h / $w) 0 0 0;
+    position: relative;
+    width: 100%;
+  }
+  .gauge_ta {
+    display: block;
+    font-family: sans-serif;
+    height: em(ptpx(140));
+    margin: em(ptpx(5)) auto 0 auto;
+    max-width: em(ptpx(120));
+    width: 100%;
+  }
+}

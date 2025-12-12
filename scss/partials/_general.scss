@@ -1,0 +1,17 @@
+/* general */
+body {
+  color: $c_base;
+  font: normal $fontweight #{$fontsize}px/#{$line_height} $fontf1;
+}
+.clearfix {
+  @include clearfix();
+}
+input, textarea, button, select {
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}

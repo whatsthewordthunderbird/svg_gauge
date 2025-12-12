@@ -1,0 +1,9 @@
+@function em ($pixels, $context: $fontsize) {
+  @return ($pixels / $context) * 1em;
+}
+@function lh ($pixels, $context: $fontsize) {
+  @return (round($pixels / $context * 100000000) / 100000000);
+}
+@function ptpx ($pt) {
+  @return ($pt / 72 * 96) * $pt_px_scale;
+}

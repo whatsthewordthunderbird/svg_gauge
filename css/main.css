@@ -1,0 +1,141 @@
+/* css reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* end of css reset */
+/* fonts */
+@font-face {
+  font-family: 'archivo_narrowbold';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/archivonarrow-bold-webfont.eot");
+  src: local("Archivo Narrow Bold"), local("ArchivoNarrow-Bold"), url("../fonts/archivonarrow-bold-webfont.woff2") format("woff2"), url("../fonts/archivonarrow-bold-webfont.woff") format("woff"), url("../fonts/archivonarrow-bold-webfont.svg#archivo_narrowbold") format("svg"), url("../fonts/archivonarrow-bold-webfont.eot#iefix") format("embedded-opentype");
+}
+/* general */
+body {
+  color: #191247;
+  font: normal 400 16px/1 "archivo_narrowbold", sans-serif;
+}
+
+.clearfix:before {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+input, textarea, button, select {
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* contents */
+.contents_wrap {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+.contents_wrap .title_cont h1 {
+  color: #706f6e;
+  font-size: 3.125em;
+  padding: 0.72em 0;
+  position: relative;
+  text-align: center;
+}
+.contents_wrap .title_cont h1:after {
+  border-top: 2px solid #929496;
+  content: ' ';
+  left: 15%;
+  margin: 0 -1px 0 0;
+  position: absolute;
+  top: 100%;
+  width: 70%;
+}
+.contents_wrap .cols_cont {
+  padding: 1.625em 0;
+  position: relative;
+}
+.contents_wrap .col {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  padding: 0 2.5em;
+  width: 33.3333333333%;
+}
+.contents_wrap .col .titles_cont {
+  padding: 2.125em 0;
+  text-align: center;
+}
+.contents_wrap .col .titles_cont h3 {
+  color: #676767;
+  font-size: 2em;
+  padding: 0.3125em 0 0.4375em 0;
+}
+.contents_wrap .col .titles_cont h4 {
+  color: #706f6e;
+  font-size: 1.25em;
+}
+.contents_wrap .gauge_cont {
+  height: 100%;
+  width: 100%;
+}
+.contents_wrap .gridster {
+  background: #f6f6f6;
+}
+.contents_wrap .gridster .gs-w {
+  cursor: pointer;
+  cursor: move;
+}
+.contents_wrap .gridster .preview-holder {
+  background-color: #fff;
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+}

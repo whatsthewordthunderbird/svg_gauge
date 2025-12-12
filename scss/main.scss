@@ -1,0 +1,10 @@
+// mixins & variables
+@import "modules/_functions.scss";
+@import "modules/_mixins.scss";
+@import "modules/_vars.scss";
+
+// Partials
+@import "partials/_reset.scss";
+@import "partials/_typography.scss";
+@import "partials/_general.scss";
+@import "partials/_main.scss";
